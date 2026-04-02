@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Build a Farm — Open-source tools for farmers who own their data</title>
+<meta name="description" content="Farmer-owned monitoring infrastructure for aquaponics and recirculating aquaculture. Open-source sensor nodes and AI advisory. No cloud subscriptions.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0f0d;--fg:#e8ede9;--accent:#4ade80;--dim:#6b7c6f;--card:#121a16}
+body{font-family:system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--fg);line-height:1.6}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:720px;margin:0 auto;padding:2rem 1.5rem}
+.hero{padding:4rem 0 3rem;text-align:center}
+.hero h1{font-size:2.5rem;font-weight:800;letter-spacing:-0.02em;margin-bottom:0.5rem}
+.hero h1 span{color:var(--accent)}
+.hero p{font-size:1.15rem;color:var(--dim);max-width:480px;margin:0 auto 2rem}
+.btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-block;padding:0.75rem 1.5rem;border-radius:8px;font-weight:600;font-size:0.95rem;transition:all 0.2s}
+.btn-primary{background:var(--accent);color:var(--bg)}
+.btn-primary:hover{background:#22c55e;text-decoration:none}
+.btn-secondary{border:1px solid var(--dim);color:var(--fg)}
+.btn-secondary:hover{border-color:var(--accent);text-decoration:none}
+section{padding:3rem 0;border-top:1px solid #1a2420}
+h2{font-size:1.5rem;font-weight:700;margin-bottom:1rem}
+.steps{display:grid;gap:1.5rem;margin-top:1.5rem}
+.step{background:var(--card);padding:1.5rem;border-radius:12px;border-left:3px solid var(--accent)}
+.step-num{font-size:2rem;font-weight:800;color:var(--accent);line-height:1}
+.step h3{margin:0.5rem 0 0.25rem}
+.step p{color:var(--dim);font-size:0.9rem}
+.principles{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1rem}
+.principle{background:var(--card);padding:1rem;border-radius:8px}
+.principle strong{color:var(--accent)}
+.principle p{color:var(--dim);font-size:0.85rem;margin-top:0.25rem}
+footer{padding:3rem 0 2rem;border-top:1px solid #1a2420;text-align:center;color:var(--dim);font-size:0.85rem}
+footer a{color:var(--dim)}
+@media(max-width:600px){
+  .hero h1{font-size:1.8rem}
+  .principles{grid-template-columns:1fr}
+  .btns{flex-direction:column;align-items:center}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="hero">
+    <h1>Build a <span>Farm</span></h1>
+    <p>Open-source tools for farmers who own their data.</p>
+    <div class="btns">
+      <a href="https://v.discover.farm" class="btn btn-primary">Talk to Farm AI →</a>
+      <a href="https://grafana.synapseagriculture.com" class="btn btn-secondary">View Live Data</a>
+    </div>
+  </div>
+
+  <section>
+    <h2>Your farm. Your data. Your hardware.</h2>
+    <p>Commercial water monitoring starts at $5,000 plus cloud subscriptions that fail offline. We build sensor nodes that cost under $500 and run on hardware you control. No vendor lock-in. No monthly fees for your own data.</p>
+  </section>
+
+  <section>
+    <h2>How it works</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Plug in a sensor node</h3>
+        <p>ESP32 microcontroller + Atlas Scientific probes. Reads pH, dissolved oxygen, and temperature every 30 seconds. Under $300 in parts.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>Data flows to your server</h3>
+        <p>MQTT to a local database on a $300 mini-server. Not someone else's cloud. Works offline. Works in the field. Works when the internet doesn't.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>AI watches for trouble</h3>
+        <p>Pattern detection catches pH crashes, oxygen drops, and temperature swings before your fish notice. Alerts on your phone. Advisory from an AI that knows aquaculture science.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h3>Open source. Forever.</h3>
+        <p>Fork it. Modify it. Build on it. The firmware, the server stack, the dashboards — all open. Your operation doesn't depend on us staying in business.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Built for independence</h2>
+    <div class="principles">
+      <div class="principle">
+        <strong>Sovereign data</strong>
+        <p>Farm data stays on your hardware. Period.</p>
+      </div>
+      <div class="principle">
+        <strong>Works offline</strong>
+        <p>No internet? Sensors still read. Data still logs. Alerts still fire.</p>
+      </div>
+      <div class="principle">
+        <strong>Modular</strong>
+        <p>Start with water. Add soil. Add crop records. Snap together what you need.</p>
+      </div>
+      <div class="principle">
+        <strong>Pacific-ready</strong>
+        <p>Designed for island farms where connectivity is a luxury and food sovereignty matters.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>A <a href="https://synapseagriculture.com">Synapse Agriculture</a> SBC project.</p>
+    <p style="margin-top:0.5rem">
+      <a href="https://git.synapseagriculture.com">Source</a> · 
+      <a href="https://chat.synapseagriculture.com">Community</a> · 
+      <a href="mailto:robbo@synapseagriculture.com">Contact</a>
+    </p>
+  </footer>
+</div>
+</body>
+</html>
